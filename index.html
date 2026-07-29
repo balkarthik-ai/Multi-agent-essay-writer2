@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Multi-Agent Essay Writer</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="hero">
+        <p class="eyebrow">Three-agent writing assistant</p>
+        <h1>Create an essay with a team of AI helpers</h1>
+        <p class="subtitle">
+          Agent 1 suggests ideas, Agent 2 writes the essay, and Agent 3 polishes it for grammar and clarity.
+        </p>
+      </header>
+
+      <main class="workspace">
+        <section class="panel">
+          <div class="panel-header">
+            <h2>Agent 1 — Idea Generator</h2>
+            <label class="select-wrap">
+              <span>Audience</span>
+              <select id="ageGroup">
+                <option value="8-12">Ages 8-12</option>
+                <option value="13-18">Ages 13-18</option>
+              </select>
+            </label>
+          </div>
+
+          <button id="generateIdeasBtn">Generate 7 essay ideas</button>
+          <div id="ideasList" class="ideas-grid"></div>
+        </section>
+
+        <section class="panel">
+          <div class="panel-header">
+            <h2>Agent 2 — Essay Builder</h2>
+          </div>
+          <div id="selectedIdeaBox" class="status-box">Choose an idea from Agent 1 to begin.</div>
+          <button id="writeEssayBtn" disabled>Write essay draft</button>
+          <div id="essayDraft" class="essay-output"></div>
+        </section>
+
+        <section class="panel">
+          <div class="panel-header">
+            <h2>Agent 3 — Editor</h2>
+          </div>
+          <button id="polishEssayBtn" disabled>Review and perfect</button>
+          <div id="reviewNotes" class="review-notes"></div>
+          <div id="finalEssay" class="essay-output"></div>
+        </section>
+      </main>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
